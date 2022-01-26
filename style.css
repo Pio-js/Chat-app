@@ -37,6 +37,8 @@ main {
 }
 
 #message-container > div {
+    display: flex;
+    justify-content: space-between;
     width: 90%;
     margin-top: 10px;
     padding: 5px;
@@ -60,4 +62,8 @@ main {
 
 #message-input {
     flex-grow: 1;
+}
+
+#time-container {
+    color: rgb(68, 16, 16);
 }

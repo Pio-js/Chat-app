@@ -44,7 +44,13 @@ messageForm.addEventListener('submit', e => {
 });
 
 function appendMessage(message) {
+    //adding time when the message is created
+    const today = new Date();
+    const time = today.getHours() + ":" + today.getMinutes();
+    const timeDiv = `<div id='time-container'>${time}</div>`;
+    //creating a new div to put the message in the message container
     const messageElement = document.createElement('div');
     messageElement.innerText = message;
+    messageElement.insertAdjacentHTML('beforeend', timeDiv)
     messageContainer.append(messageElement);
 }
